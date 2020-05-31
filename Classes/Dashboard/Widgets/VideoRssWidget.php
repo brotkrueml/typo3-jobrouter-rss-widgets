@@ -53,7 +53,7 @@ class VideoRssWidget extends AbstractMediaRssWidget implements RequireJsModuleIn
                 'link' => $this->changeUtmParameter((string)$item->link),
                 'pubDate' => \trim((string)$item->pubDate),
                 'description' => \trim(\strip_tags((string)$item->description)),
-                'image' => $this->getImage($media->thumbnail ?? []),
+                'media' => $media,
                 'videoEmbedUrl' => (string)$media->player->attributes()['url'],
             ];
         }
@@ -61,6 +61,11 @@ class VideoRssWidget extends AbstractMediaRssWidget implements RequireJsModuleIn
             return new \DateTime($item2['pubDate']) <=> new \DateTime($item1['pubDate']);
         });
         $items = \array_slice($items, 0, $this->options['limit']);
+
+        foreach ($items as &$item) {
+            $item['image'] = $this->getImage($item['media']->thumbnail ?? []);
+            unset($item['media']);
+        }
 
         $this->cache->set($cacheHash, $items, ['dashboard_rss'], $this->options['lifeTime']);
 
