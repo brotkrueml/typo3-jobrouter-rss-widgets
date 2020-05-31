@@ -57,7 +57,7 @@ class VideoRssWidget extends AbstractMediaRssWidget implements RequireJsModuleIn
                 'videoEmbedUrl' => (string)$media->player->attributes()['url'],
             ];
         }
-        \usort($items, function ($item1, $item2) {
+        \usort($items, static function ($item1, $item2) {
             return new \DateTime($item2['pubDate']) <=> new \DateTime($item1['pubDate']);
         });
         $items = \array_slice($items, 0, $this->options['limit']);
