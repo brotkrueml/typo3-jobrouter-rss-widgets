@@ -6,3 +6,4 @@
 /.readthedocs.yml export-ignore
 /Documentation export-ignore
 /README.md export-ignore
+/psalm.xml export-ignore

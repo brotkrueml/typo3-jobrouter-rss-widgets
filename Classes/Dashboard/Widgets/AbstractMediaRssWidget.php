@@ -15,6 +15,7 @@ use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Imaging\GraphicalFunctions;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Dashboard\Widgets\ButtonProviderInterface;
+use TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider;
 use TYPO3\CMS\Dashboard\Widgets\WidgetConfigurationInterface;
 use TYPO3\CMS\Dashboard\Widgets\WidgetInterface;
 use TYPO3\CMS\Fluid\View\StandaloneView;
@@ -71,7 +72,7 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
         GraphicalFunctions $graphicalFunctions,
         Cache $cache,
         StandaloneView $view,
-        $buttonProvider = null,
+        ButtonProvider $buttonProvider = null,
         array $options = []
     ) {
         $this->configuration = $configuration;
@@ -130,7 +131,7 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
         return $items;
     }
 
-    abstract protected function generateRssItems(\SimpleXMLElement $rssFeed);
+    abstract protected function generateRssItems(\SimpleXMLElement $rssFeed): array;
 
     protected function changeUtmParameter(string $link): string
     {
@@ -172,9 +173,11 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
             if ($imageExtension === 'svg') {
                 \rename($originalDownloadedImagePath, $absoluteScaledImagePath);
             } else {
-                $scaledImage = $this->graphicalFunctions->imageMagickConvert($originalDownloadedImagePath, '', $this->options['imageWidth']);
-                \rename($scaledImage[3], $absoluteScaledImagePath);
-                \unlink($originalDownloadedImagePath);
+                $scaledImage = $this->graphicalFunctions->imageMagickConvert($originalDownloadedImagePath, '', (string)$this->options['imageWidth']);
+                if (\is_array($scaledImage)) {
+                    \rename($scaledImage[3], $absoluteScaledImagePath);
+                    \unlink($originalDownloadedImagePath);
+                }
             }
         }
 
