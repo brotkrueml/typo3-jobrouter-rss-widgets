@@ -24,7 +24,7 @@ use TYPO3\CMS\Fluid\View\StandaloneView;
  */
 abstract class AbstractMediaRssWidget implements WidgetInterface
 {
-    protected const UPLOADS_DIR = 'uploads/tx_jobrouterrsswidgets';
+    protected const UPLOADS_DIR = 'typo3temp/assets/tx_jobrouterrsswidgets';
 
     /**
      * @var WidgetConfigurationInterface

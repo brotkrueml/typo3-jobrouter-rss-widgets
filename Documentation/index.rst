@@ -34,4 +34,5 @@ Contents
    introduction
    installation
    usage
+   maintenance
    copyright
