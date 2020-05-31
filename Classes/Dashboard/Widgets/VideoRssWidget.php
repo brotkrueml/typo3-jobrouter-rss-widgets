@@ -11,7 +11,6 @@ declare(strict_types=1);
 namespace Brotkrueml\JobRouterRssWidgets\Dashboard\Widgets;
 
 use Brotkrueml\JobRouterRssWidgets\Extension;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Dashboard\Widgets\AdditionalCssInterface;
 use TYPO3\CMS\Dashboard\Widgets\RequireJsModuleInterface;
 
@@ -20,30 +19,13 @@ use TYPO3\CMS\Dashboard\Widgets\RequireJsModuleInterface;
  */
 class VideoRssWidget extends AbstractMediaRssWidget implements RequireJsModuleInterface, AdditionalCssInterface
 {
-    public function renderWidgetContent(): string
+    public function getTemplate(): string
     {
-        $this->view->setTemplate('Widget/VideoRssWidget');
-        $this->view->assignMultiple([
-            'items' => $this->getRssItems(),
-            'options' => $this->options,
-            'button' => $this->buttonProvider,
-            'configuration' => $this->configuration,
-        ]);
-        return $this->view->render();
+        return 'Widget/VideoRssWidget';
     }
 
-    protected function getRssItems(): array
+    protected function generateRssItems(\SimpleXMLElement $rssFeed): array
     {
-        $cacheHash = \md5(static::class . $this->options['feedUrl']);
-        if ($items = $this->cache->get($cacheHash)) {
-            return $items;
-        }
-
-        $rssContent = GeneralUtility::getUrl($this->options['feedUrl']);
-        if ($rssContent === false) {
-            throw new \RuntimeException('RSS URL could not be fetched', 1588604410);
-        }
-        $rssFeed = \simplexml_load_string($rssContent);
         $items = [];
         foreach ($rssFeed->channel->item as $item) {
             $media = $item->children('http://search.yahoo.com/mrss/')->content;
@@ -66,8 +48,6 @@ class VideoRssWidget extends AbstractMediaRssWidget implements RequireJsModuleIn
             $item['image'] = $this->getImage($item['media']->thumbnail ?? []);
             unset($item['media']);
         }
-
-        $this->cache->set($cacheHash, $items, ['dashboard_rss'], $this->options['lifeTime']);
 
         return $items;
     }

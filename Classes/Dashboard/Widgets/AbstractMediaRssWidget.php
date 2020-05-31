@@ -96,9 +96,41 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
         }
     }
 
-    abstract public function renderWidgetContent(): string;
+    public function renderWidgetContent(): string
+    {
+        $this->view->setTemplate($this->getTemplate());
+        $this->view->assignMultiple([
+            'items' => $this->getRssItems(),
+            'options' => $this->options,
+            'button' => $this->buttonProvider,
+            'configuration' => $this->configuration,
+        ]);
+        return $this->view->render();
+    }
 
-    abstract protected function getRssItems(): array;
+    abstract protected function getTemplate(): string;
+
+    protected function getRssItems(): array
+    {
+        $cacheHash = \md5(static::class . $this->options['feedUrl']);
+        if ($items = $this->cache->get($cacheHash)) {
+            return $items;
+        }
+
+        $rssContent = GeneralUtility::getUrl($this->options['feedUrl']);
+        if ($rssContent === false) {
+            throw new \RuntimeException('RSS URL could not be fetched', 1588345468);
+        }
+        $rssFeed = \simplexml_load_string($rssContent);
+
+        $items = $this->generateRssItems($rssFeed);
+
+        $this->cache->set($cacheHash, $items, ['dashboard_rss'], $this->options['lifeTime']);
+
+        return $items;
+    }
+
+    abstract protected function generateRssItems(\SimpleXMLElement $rssFeed);
 
     protected function changeUtmParameter(string $link): string
     {
