@@ -1,49 +1,55 @@
 {
-    "name": "brotkrueml/typo3-jobrouter-rss-widgets",
-    "type": "typo3-cms-extension",
-    "description": "TYPO3 dashboard widgets displaying RSS feeds from JobRouter website",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Chris Müller",
-            "role": "Developer"
-        }
-    ],
-    "keywords": [
-        "TYPO3 CMS",
-        "TYPO3 extension",
-        "JobRouter",
-        "RSS"
-    ],
-    "require": {
-        "php": ">=7.2",
-        "ext-simplexml": "*",
-        "typo3/cms-core": "^10.4",
-        "typo3/cms-dashboard": "^10.4"
-    },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "vimeo/psalm": "^3.11"
-    },
-    "autoload": {
-        "psr-4": {
-            "Brotkrueml\\JobRouterRssWidgets\\": "Classes/"
-        }
-    },
-    "config": {
-        "sort-packages": true,
-        "vendor-dir": ".Build/vendor",
-        "bin-dir": ".Build/bin"
-    },
-    "extra": {
-        "typo3/cms": {
-            "extension-key": "jobrouter_rss_widgets",
-            "app-dir": ".Build",
-            "web-dir": ".Build/web"
-        }
-    },
-    "scripts": {
-        "fix-cs": ".Build/bin/php-cs-fixer fix",
-        "zip": "grep -Po \"(?<='version' => ')([0-9]+\\.[0-9]+\\.[0-9]+)\" ext_emconf.php | xargs -I {version} sh -c 'mkdir -p ../zip; git archive -v -o \"../zip/${PWD##*/}_{version}.zip\" v{version}'"
-    }
+	"name": "brotkrueml/typo3-jobrouter-rss-widgets",
+	"type": "typo3-cms-extension",
+	"description": "TYPO3 dashboard widgets displaying RSS feeds from JobRouter website",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Chris Müller",
+			"role": "Developer"
+		}
+	],
+	"keywords": [
+		"TYPO3 CMS",
+		"TYPO3 extension",
+		"JobRouter",
+		"RSS"
+	],
+	"require": {
+		"php": ">=7.2",
+		"ext-simplexml": "*",
+		"typo3/cms-core": "^10.4",
+		"typo3/cms-dashboard": "^10.4"
+	},
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "^2.16",
+		"phpunit/phpunit": "^8.5 || ^9.1",
+		"vimeo/psalm": "^3.11"
+	},
+	"autoload": {
+		"psr-4": {
+			"Brotkrueml\\JobRouterRssWidgets\\": "Classes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Brotkrueml\\JobRouterRssWidgets\\Tests\\": "Tests/"
+		}
+	},
+	"config": {
+		"sort-packages": true,
+		"vendor-dir": ".Build/vendor",
+		"bin-dir": ".Build/bin"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "jobrouter_rss_widgets",
+			"app-dir": ".Build",
+			"web-dir": ".Build/web"
+		}
+	},
+	"scripts": {
+		"fix-cs": ".Build/bin/php-cs-fixer fix",
+		"zip": "grep -Po \"(?<='version' => ')([0-9]+\\.[0-9]+\\.[0-9]+)\" ext_emconf.php | xargs -I {version} sh -c 'mkdir -p ../zip; git archive -v -o \"../zip/${PWD##*/}_{version}.zip\" v{version}'"
+	}
 }

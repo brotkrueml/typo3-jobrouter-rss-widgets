@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace Brotkrueml\JobRouterRssWidgets\Dashboard\Widgets;
 
+use Brotkrueml\JobRouterRssWidgets\Dashboard\Configuration\WidgetOptions;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface as Cache;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Imaging\GraphicalFunctions;
@@ -48,7 +49,7 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
     protected $graphicalFunctions;
 
     /**
-     * @var array
+     * @var WidgetOptions
      */
     protected $options;
 
@@ -80,15 +81,7 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
         $this->cache = $cache;
         $this->view = $view;
         $this->buttonProvider = $buttonProvider;
-        $this->options = \array_merge(
-            [
-                'limit' => 3,
-                'lifeTime' => 43200,
-                'imageWidth' => 100,
-                'utmMedium' => '',
-            ],
-            $options
-        );
+        $this->options = new WidgetOptions($options);
 
         $this->webUploadsDir = '/' . static::UPLOADS_DIR;
         $this->absoluteUploadsDir = Environment::getPublicPath() . $this->webUploadsDir;
@@ -113,12 +106,12 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
 
     protected function getRssItems(): array
     {
-        $cacheHash = \md5(static::class . $this->options['feedUrl']);
+        $cacheHash = \md5(static::class . $this->options->getFeedUrl());
         if ($items = $this->cache->get($cacheHash)) {
             return $items;
         }
 
-        $rssContent = GeneralUtility::getUrl($this->options['feedUrl']);
+        $rssContent = GeneralUtility::getUrl($this->options->getFeedUrl());
         if ($rssContent === false) {
             throw new \RuntimeException('RSS URL could not be fetched', 1588345468);
         }
@@ -126,7 +119,7 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
 
         $items = $this->generateRssItems($rssFeed);
 
-        $this->cache->set($cacheHash, $items, ['dashboard_rss'], $this->options['lifeTime']);
+        $this->cache->set($cacheHash, $items, ['dashboard_rss'], $this->options->getLifeTime());
 
         return $items;
     }
@@ -135,14 +128,14 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
 
     protected function changeUtmParameter(string $link): string
     {
-        if ($this->options['utmMedium'] === '') {
+        if (empty($this->options->getUtmMedium())) {
             return $link;
         }
 
         return \sprintf(
             '%s?utm_medium=%s',
             \strtok($link, '?'),
-            $this->options['utmMedium']
+            $this->options->getUtmMedium()
         );
     }
 
@@ -159,7 +152,7 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
         }
 
         $imageExtension = \pathinfo($imageUrl, \PATHINFO_EXTENSION);
-        $scaledImageFileName = \md5($this->options['imageWidth'] . $imageUrl) . '.' . $imageExtension;
+        $scaledImageFileName = \md5((string)$this->options->getImageWidth() . $imageUrl) . '.' . $imageExtension;
         $absoluteScaledImagePath = $this->absoluteUploadsDir . '/' . $scaledImageFileName;
         $webScaledImagePath = $this->webUploadsDir . '/' . $scaledImageFileName;
 
@@ -173,7 +166,7 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
             if ($imageExtension === 'svg') {
                 \rename($originalDownloadedImagePath, $absoluteScaledImagePath);
             } else {
-                $scaledImage = $this->graphicalFunctions->imageMagickConvert($originalDownloadedImagePath, '', (string)$this->options['imageWidth']);
+                $scaledImage = $this->graphicalFunctions->imageMagickConvert($originalDownloadedImagePath, '', (string)$this->options->getImageWidth());
                 if (\is_array($scaledImage)) {
                     \rename($scaledImage[3], $absoluteScaledImagePath);
                     \unlink($originalDownloadedImagePath);
@@ -184,7 +177,7 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
         return [
             'src' => $webScaledImagePath,
             'alt' => $imageAlt,
-            'width' => $this->options['imageWidth'],
+            'width' => $this->options->getImageWidth(),
         ];
     }
 

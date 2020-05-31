@@ -42,7 +42,7 @@ class VideoRssWidget extends AbstractMediaRssWidget implements RequireJsModuleIn
         \usort($items, static function (array $item1, array $item2): int {
             return new \DateTime($item2['pubDate']) <=> new \DateTime($item1['pubDate']);
         });
-        $items = \array_slice($items, 0, $this->options['limit']);
+        $items = \array_slice($items, 0, $this->options->getLimit());
 
         foreach ($items as &$item) {
             $item['image'] = $this->getImage($item['media']->thumbnail ?? []);
