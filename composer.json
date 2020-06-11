@@ -1,7 +1,7 @@
 {
 	"name": "brotkrueml/typo3-jobrouter-rss-widgets",
 	"type": "typo3-cms-extension",
-	"description": "TYPO3 dashboard widgets displaying RSS feeds from JobRouter website",
+	"description": "TYPO3 dashboard widgets displaying RSS feeds from the JobRouter website (www.jobrouter.com)",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{

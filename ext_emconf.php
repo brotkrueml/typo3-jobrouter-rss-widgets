@@ -2,13 +2,13 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'JobRouter RSS Widgets',
-    'description' => 'Dashboard widgets displaying RSS feeds from JobRouter website',
+    'description' => 'Dashboard widgets displaying RSS feeds from the JobRouter website (www.jobrouter.com)',
     'category' => 'be',
-    'state' => 'beta',
+    'state' => 'stable',
     'clearCacheOnLoad' => true,
     'author' => 'Chris Müller',
     'author_email' => 'typo3@krue.ml',
-    'version' => '0.1.0-dev',
+    'version' => '1.0.0',
     'constraints' => [
         'depends' => [
             'typo3' => '10.4.0-10.4.99',

@@ -7,13 +7,13 @@ Usage
 Target group: **Editors, Integrators, Administrators**
 
 This extension provides dashboard widgets that display the latest content of
-RSS feeds from the JobRouter website.
+RSS feeds from the `JobRouter <https://www.jobrouter.com/>`_ website.
 
 Select widgets
 ==============
 
 The JobRouter RSS widgets can be added to a dashboard with the
-:guilabel:`Add widget` wizard. You find them on the :guilabel:`JobRouter` tab:
+:guilabel:`Add widget` wizard. You find it on the :guilabel:`JobRouter` tab:
 
 .. figure:: _images/add-widget.png
    :alt: Add JobRouter RSS widgets
@@ -22,7 +22,7 @@ The JobRouter RSS widgets can be added to a dashboard with the
 
 .. note::
 
-   The available widgets depend on the :ref:`access rights
+   The available widgets for editors depend on the :ref:`access rights
    <dashboard:permission-handling-of-widgets>` of a user.
 
 
@@ -44,9 +44,10 @@ The following widgets are currently available:
 * `Videos (English) <https://www.jobrouter.com/en/videos/>`_
 * `Videos (German) <https://www.jobrouter.com/de/videos/>`_
 
-The last three entries are shown. If you click on the title, the corresponding
-detail page is loaded - as with other RSS widgets from TYPO3. By clicking on
-preview image, the video is loaded and can be played:
+The latest three entries are shown. If you click on the title, the corresponding
+detail page is loaded - as in other RSS widgets in TYPO3. By clicking on a
+preview image in a video widget, the according video is loaded and can be
+viewed:
 
 .. figure:: _images/video-modal.png
    :alt: Video modal
