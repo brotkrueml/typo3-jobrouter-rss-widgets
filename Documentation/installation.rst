@@ -23,16 +23,37 @@ extension.
 
 .. _installation-composer:
 
-Composer
-========
-
-For now only the Composer-based installation is supported:
+Installation via composer
+=========================
 
 #. Add a dependency ``brotkrueml/typo3-jobrouter-rss-widgets`` to your project's
-   :file:`composer.json` file to install the current version:
+   :file:`composer.json` file to install the current stable version:
 
    .. code-block:: shell
 
       composer req brotkrueml/typo3-jobrouter-rss-widgets
 
 #. Activate the extension in the Extension Manager.
+
+
+.. _installation-extension-manager:
+
+Installation in Extension Manager
+=================================
+
+The extension needs to be installed as any other extension of TYPO3 CMS in
+the Extension Manager:
+
+#. Switch to the module :guilabel:`Admin Tools` > :guilabel:`Extensions`.
+
+#. Get the extension
+
+   #. **Get it from the Extension Manager:** Press the
+      :guilabel:`Retrieve/Update` button and search for the extension key
+      ``jobrouter_rss_widgets`` and import the extension from the repository.
+
+   #. **Get it from typo3.org:** You can always get the current version from
+      `https://extensions.typo3.org/extension/jobrouter_rss_widgets/
+      <https://extensions.typo3.org/extension/jobrouter_rss_widgets/>`_ by
+      downloading either the ``t3x`` or ``zip`` version. Upload the file
+      afterwards in the Extension Manager.
