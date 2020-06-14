@@ -48,9 +48,10 @@ the Extension Manager:
 
 #. Get the extension
 
-   #. **Get it from the Extension Manager:** Press the
-      :guilabel:`Retrieve/Update` button and search for the extension key
-      ``jobrouter_rss_widgets`` and import the extension from the repository.
+   #. **Get it from the Extension Manager:** Select the
+      :guilabel:`Get Extensions` entry in the upper menu bar, search for the
+      extension key ``jobrouter_rss_widgets`` and import the extension from the
+      repository.
 
    #. **Get it from typo3.org:** You can always get the current version from
       `https://extensions.typo3.org/extension/jobrouter_rss_widgets/
