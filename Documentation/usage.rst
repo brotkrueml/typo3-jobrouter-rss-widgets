@@ -49,7 +49,7 @@ detail page is loaded - as in other RSS widgets in TYPO3. By clicking on a
 preview image in a video widget, the according video is loaded and can be
 viewed:
 
-.. figure:: _images/video-modal.png
+.. figure:: _images/video-modal.jpg
    :alt: Video modal
 
    Video modal

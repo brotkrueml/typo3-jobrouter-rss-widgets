@@ -12,7 +12,7 @@ require([
       type: Modal.types.iframe,
       title: linkElement.dataset.title,
       content: linkElement.href,
-      size: Modal.sizes.medium,
+      size: Modal.sizes.full,
     };
 
     Modal.advanced(configuration);
