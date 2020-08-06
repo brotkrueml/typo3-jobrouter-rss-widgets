@@ -128,15 +128,11 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
 
     protected function changeUtmParameter(string $link): string
     {
-        if (empty($this->options->getUtmMedium())) {
-            return $link;
-        }
+        [$linkWithoutQuery, $queryParams] = \explode('?', $link);
+        \parse_str($queryParams, $queryParamsArray);
+        $queryParamsArray['utm_medium'] = $this->options->getUtmMedium();
 
-        return \sprintf(
-            '%s?utm_medium=%s',
-            \strtok($link, '?'),
-            $this->options->getUtmMedium()
-        );
+        return \sprintf('%s?%s', $linkWithoutQuery, \http_build_query($queryParamsArray));
     }
 
     protected function getImage($haystack): array
@@ -166,7 +162,11 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
             if ($imageExtension === 'svg') {
                 \rename($originalDownloadedImagePath, $absoluteScaledImagePath);
             } else {
-                $scaledImage = $this->graphicalFunctions->imageMagickConvert($originalDownloadedImagePath, '', (string)$this->options->getImageWidth());
+                $scaledImage = $this->graphicalFunctions->imageMagickConvert(
+                    $originalDownloadedImagePath,
+                    '',
+                    (string)$this->options->getImageWidth()
+                );
                 if (\is_array($scaledImage)) {
                     \rename($scaledImage[3], $absoluteScaledImagePath);
                     \unlink($originalDownloadedImagePath);
