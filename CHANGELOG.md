@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Open video modal in full size
+- Display 5 items in each RSS widget instead of 3
 
 ## [1.0.0] - 2020-06-11
 

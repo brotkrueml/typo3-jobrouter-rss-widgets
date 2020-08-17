@@ -24,7 +24,7 @@ final class WidgetOptions
     /**
      * @var int
      */
-    private $limit = 3;
+    private $limit = 5;
 
     /**
      * @var int
