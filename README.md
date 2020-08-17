@@ -6,6 +6,7 @@ This extension supports TYPO3 v10 LTS.
 
 What this extension does:
   * Provide dashboard RSS widgets for downloads (English, German)
+  * Provide dashboard RSS widgets for press releases (English, German)
   * Provide dashboard RSS widgets for videos (English, German)
 
 [Documentation](https://typo3-jobrouter.readthedocs.io/projects/rss-widgets/)

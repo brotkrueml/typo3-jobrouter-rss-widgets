@@ -26,6 +26,20 @@ services:
       $link: 'https://www.jobrouter.com/de/downloads/?utm_campaign=downloads-rss-feed&utm_medium=typo3-rss-widgets'
       $target: '_blank'
 
+  dashboard.buttons.brotkrueml.jobrouter_rss_widgets.press_en:
+    class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
+    arguments:
+      $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.press_en.more'
+      $link: 'https://www.jobrouter.com/en/press/'
+      $target: '_blank'
+
+  dashboard.buttons.brotkrueml.jobrouter_rss_widgets.press_de:
+    class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
+    arguments:
+      $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.press_de.more'
+      $link: 'https://www.jobrouter.com/de/presse/'
+      $target: '_blank'
+
   dashboard.buttons.brotkrueml.jobrouter_rss_widgets.videos_en:
     class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
     arguments:
@@ -74,6 +88,44 @@ services:
         groupNames: 'jobrouter'
         title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.downloads_de.title'
         description: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.downloads_de.description'
+        iconIdentifier: 'content-widget-rss'
+        height: 'medium'
+        width: 'medium'
+
+  dashboard.widget.brotkrueml.jobrouter_rss_widgets.press_en:
+    class: 'TYPO3\CMS\Dashboard\Widgets\RssWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $cache: '@cache.dashboard.rss'
+      $buttonProvider: '@dashboard.buttons.brotkrueml.jobrouter_rss_widgets.press_en'
+      $options:
+        feedUrl: 'https://www.jobrouter.com/en/press/press.rss'
+        lifeTime: 43200
+    tags:
+      - name: dashboard.widget
+        identifier: 'jobrouter_rss_widgets_press_en'
+        groupNames: 'jobrouter'
+        title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.press_en.title'
+        description: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.press_en.description'
+        iconIdentifier: 'content-widget-rss'
+        height: 'medium'
+        width: 'medium'
+
+  dashboard.widget.brotkrueml.jobrouter_rss_widgets.press_de:
+    class: 'TYPO3\CMS\Dashboard\Widgets\RssWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $cache: '@cache.dashboard.rss'
+      $buttonProvider: '@dashboard.buttons.brotkrueml.jobrouter_rss_widgets.press_de'
+      $options:
+        feedUrl: 'https://www.jobrouter.com/de/presse/press.rss'
+        lifeTime: 43200
+    tags:
+      - name: dashboard.widget
+        identifier: 'jobrouter_rss_widgets_press_de'
+        groupNames: 'jobrouter'
+        title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.press_de.title'
+        description: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.press_de.description'
         iconIdentifier: 'content-widget-rss'
         height: 'medium'
         width: 'medium'

@@ -21,6 +21,24 @@
 			<trans-unit id="widgets.downloads_en.title">
 				<source><![CDATA[JobRouter Downloads (English)]]></source>
 			</trans-unit>
+			<trans-unit id="widgets.press_de.description">
+				<source><![CDATA[Lists the recent German press releases from the JobRouter website.]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.press_de.more">
+				<source><![CDATA[More press releases]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.press_de.title">
+				<source><![CDATA[JobRouter Press Releases (German)]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.press_en.description">
+				<source><![CDATA[Lists the recent English press releases from the JobRouter website.]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.press_en.more">
+				<source><![CDATA[More press releases]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.press_en.title">
+				<source><![CDATA[JobRouter Press Releases (English)]]></source>
+			</trans-unit>
 			<trans-unit id="widgets.videos_de.description">
 				<source><![CDATA[Lists the recent German videos from the JobRouter website.]]></source>
 			</trans-unit>

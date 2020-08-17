@@ -41,10 +41,12 @@ The following widgets are currently available:
 
 * `Downloads (English) <https://www.jobrouter.com/en/downloads/>`_
 * `Downloads (German) <https://www.jobrouter.com/de/downloads/>`_
+* `Press releases (English) <https://www.jobrouter.com/en/press/>`_
+* `Press releases (German) <https://www.jobrouter.com/de/presse/>`_
 * `Videos (English) <https://www.jobrouter.com/en/videos/>`_
 * `Videos (German) <https://www.jobrouter.com/de/videos/>`_
 
-The latest three entries are shown. If you click on the title, the corresponding
+The latest five items are shown. If you click on the title, the corresponding
 detail page is loaded - as in other RSS widgets in TYPO3. By clicking on a
 preview image in a video widget, the according video is loaded and can be
 viewed:
