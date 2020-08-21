@@ -35,7 +35,7 @@ final class WidgetOptionsTest extends TestCase
     {
         $options = new WidgetOptions(['feedUrl' => 'http://example.org/rss']);
 
-        self::assertSame(3, $options->getLimit());
+        self::assertSame(5, $options->getLimit());
         self::assertSame(43200, $options->getLifeTime());
         self::assertSame(100, $options->getImageWidth());
         self::assertSame('', $options->getUtmMedium());

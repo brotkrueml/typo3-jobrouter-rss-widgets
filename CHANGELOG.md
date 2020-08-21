@@ -6,8 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2020-08-21
+
 ### Added
-- RSS feed for JobRouter press releases
+- RSS widget for press releases (English/German)
 
 ### Changed
 
@@ -19,11 +21,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Initial release
 
 ### Added
-- RSS widget for Downloads (English)
-- RSS widget for Downloads (German)
-- RSS widget for Videos (English)
-- RSS widget for Videos (German)
+- RSS widget for Downloads (English/German)
+- RSS widget for Videos (English/German)
 
 
-[Unreleased]: https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/releases/tag/v1.0.0
