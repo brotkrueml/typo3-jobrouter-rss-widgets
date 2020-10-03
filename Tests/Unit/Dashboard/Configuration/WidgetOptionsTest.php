@@ -18,14 +18,12 @@ final class WidgetOptionsTest extends TestCase
             'limit' => 42,
             'lifeTime' => 12345,
             'imageWidth' => 333,
-            'utmMedium' => 'some medium',
         ]);
 
         self::assertSame('http://example.org/rss', $options->getFeedUrl());
         self::assertSame(42, $options->getLimit());
         self::assertSame(12345, $options->getLifeTime());
         self::assertSame(333, $options->getImageWidth());
-        self::assertSame('some medium', $options->getUtmMedium());
     }
 
     /**
@@ -38,7 +36,6 @@ final class WidgetOptionsTest extends TestCase
         self::assertSame(5, $options->getLimit());
         self::assertSame(43200, $options->getLifeTime());
         self::assertSame(100, $options->getImageWidth());
-        self::assertSame('', $options->getUtmMedium());
     }
 
     /**

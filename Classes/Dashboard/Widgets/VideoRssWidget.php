@@ -32,7 +32,7 @@ class VideoRssWidget extends AbstractMediaRssWidget implements RequireJsModuleIn
 
             $items[] = [
                 'title' => \trim((string)$item->title),
-                'link' => $this->changeUtmParameter((string)$item->link),
+                'link' => (string)$item->link,
                 'pubDate' => \trim((string)$item->pubDate),
                 'description' => \trim(\strip_tags((string)$item->description)),
                 'media' => $media,

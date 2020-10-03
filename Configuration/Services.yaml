@@ -16,28 +16,28 @@ services:
     class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
     arguments:
       $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.blog_en.more'
-      $link: 'https://www.jobrouter.com/en/blog/?utm_campaign=blog-rss-feed&utm_medium=typo3-rss-widgets'
+      $link: 'https://www.jobrouter.com/en/blog/'
       $target: '_blank'
 
   dashboard.buttons.brotkrueml.jobrouter_rss_widgets.blog_de:
     class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
     arguments:
       $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.blog_de.more'
-      $link: 'https://www.jobrouter.com/de/blog/?utm_campaign=blog-rss-feed&utm_medium=typo3-rss-widgets'
+      $link: 'https://www.jobrouter.com/de/blog/'
       $target: '_blank'
 
   dashboard.buttons.brotkrueml.jobrouter_rss_widgets.downloads_en:
     class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
     arguments:
       $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.downloads_en.more'
-      $link: 'https://www.jobrouter.com/en/downloads/?utm_campaign=downloads-rss-feed&utm_medium=typo3-rss-widgets'
+      $link: 'https://www.jobrouter.com/en/downloads/'
       $target: '_blank'
 
   dashboard.buttons.brotkrueml.jobrouter_rss_widgets.downloads_de:
     class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
     arguments:
       $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.downloads_de.more'
-      $link: 'https://www.jobrouter.com/de/downloads/?utm_campaign=downloads-rss-feed&utm_medium=typo3-rss-widgets'
+      $link: 'https://www.jobrouter.com/de/downloads/'
       $target: '_blank'
 
   dashboard.buttons.brotkrueml.jobrouter_rss_widgets.press_en:
@@ -58,14 +58,14 @@ services:
     class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
     arguments:
       $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.videos_en.more'
-      $link: 'https://www.jobrouter.com/en/videos/?utm_campaign=video-mrss-feed&utm_medium=typo3-rss-widgets'
+      $link: 'https://www.jobrouter.com/en/videos/'
       $target: '_blank'
 
   dashboard.buttons.brotkrueml.jobrouter_rss_widgets.videos_de:
     class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
     arguments:
       $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.videos_de.more'
-      $link: 'https://www.jobrouter.com/de/videos/?utm_campaign=video-mrss-feed&utm_medium=typo3-rss-widgets'
+      $link: 'https://www.jobrouter.com/de/videos/'
       $target: '_blank'
 
   dashboard.widget.brotkrueml.jobrouter_rss_widgets.blog_en:
@@ -76,7 +76,6 @@ services:
       $cache: '@cache.dashboard.rss'
       $options:
         feedUrl: 'https://www.jobrouter.com/en/blog/blog.rss'
-        utmMedium: 'typo3-rss-widgets'
     tags:
       - name: dashboard.widget
         identifier: 'jobrouter_rss_widgets_blog_en'
@@ -95,7 +94,6 @@ services:
       $cache: '@cache.dashboard.rss'
       $options:
         feedUrl: 'https://www.jobrouter.com/de/blog/blog.rss'
-        utmMedium: 'typo3-rss-widgets'
     tags:
       - name: dashboard.widget
         identifier: 'jobrouter_rss_widgets_blog_de'
@@ -114,7 +112,6 @@ services:
       $cache: '@cache.dashboard.rss'
       $options:
         feedUrl: 'https://www.jobrouter.com/en/downloads/downloads.rss'
-        utmMedium: 'typo3-rss-widgets'
     tags:
       - name: dashboard.widget
         identifier: 'jobrouter_rss_widgets_downloads_en'
@@ -133,7 +130,6 @@ services:
       $cache: '@cache.dashboard.rss'
       $options:
         feedUrl: 'https://www.jobrouter.com/de/downloads/downloads.rss'
-        utmMedium: 'typo3-rss-widgets'
     tags:
       - name: dashboard.widget
         identifier: 'jobrouter_rss_widgets_downloads_de'
@@ -190,7 +186,6 @@ services:
       $cache: '@cache.dashboard.rss'
       $options:
         feedUrl: 'https://www.jobrouter.com/en/videos/video.rss'
-        utmMedium: 'typo3-rss-widgets'
     tags:
       - name: dashboard.widget
         identifier: 'jobrouter_rss_widgets_videos_en'
@@ -209,7 +204,6 @@ services:
       $cache: '@cache.dashboard.rss'
       $options:
         feedUrl: 'https://www.jobrouter.com/de/videos/video.rss'
-        utmMedium: 'typo3-rss-widgets'
     tags:
       - name: dashboard.widget
         identifier: 'jobrouter_rss_widgets_videos_de'

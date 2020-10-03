@@ -126,15 +126,6 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
 
     abstract protected function generateRssItems(\SimpleXMLElement $rssFeed): array;
 
-    protected function changeUtmParameter(string $link): string
-    {
-        [$linkWithoutQuery, $queryParams] = \explode('?', $link);
-        \parse_str($queryParams, $queryParamsArray);
-        $queryParamsArray['utm_medium'] = $this->options->getUtmMedium();
-
-        return \sprintf('%s?%s', $linkWithoutQuery, \http_build_query($queryParamsArray));
-    }
-
     protected function getImage($haystack): array
     {
         [$imageUrl, $imageAlt] = $this->getImageInformation($haystack);

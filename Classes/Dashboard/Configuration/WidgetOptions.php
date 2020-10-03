@@ -36,11 +36,6 @@ final class WidgetOptions
      */
     private $imageWidth = 100;
 
-    /**
-     * @var string
-     */
-    private $utmMedium = '';
-
     public function __construct(array $options)
     {
         if ($this->isUrl($options['feedUrl'] ?? '')) {
@@ -57,10 +52,6 @@ final class WidgetOptions
 
         if (isset($options['imageWidth']) && $this->isPositiveInteger($options['imageWidth'])) {
             $this->imageWidth = $options['imageWidth'];
-        }
-
-        if (($options['utmMedium'] ?? false) && \is_string($options['utmMedium'])) {
-            $this->utmMedium = $options['utmMedium'];
         }
     }
 
@@ -112,10 +103,5 @@ final class WidgetOptions
     public function getImageWidth(): int
     {
         return $this->imageWidth;
-    }
-
-    public function getUtmMedium(): string
-    {
-        return $this->utmMedium;
     }
 }

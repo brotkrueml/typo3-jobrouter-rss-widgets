@@ -26,7 +26,7 @@ class PictureRssWidget extends AbstractMediaRssWidget
         foreach ($rssFeed->channel->item as $item) {
             $items[] = [
                 'title' => \trim((string)$item->title),
-                'link' => $this->changeUtmParameter((string)$item->link),
+                'link' => (string)$item->link,
                 'pubDate' => \trim((string)$item->pubDate),
                 'description' => \trim(\strip_tags((string)$item->description)),
                 'originalDescription' => (string)$item->description,
