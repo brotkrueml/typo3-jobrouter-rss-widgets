@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf" date="2020-09-29T16:13:12Z" product-name="jobrouter_rss_widgets">
+	<file source-language="en" datatype="plaintext" original="EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf" date="2020-10-03T07:28:02Z" product-name="jobrouter_rss_widgets">
 		<header/>
 		<body>
+			<trans-unit id="preset.de.description">
+				<source><![CDATA[A dashboard with all available JobRouter RSS Feeds in German.]]></source>
+			</trans-unit>
+			<trans-unit id="preset.de.title">
+				<source><![CDATA[JobRouter RSS Feeds (German)]]></source>
+			</trans-unit>
+			<trans-unit id="preset.en.description">
+				<source><![CDATA[A dashboard with all available JobRouter RSS Feeds in English.]]></source>
+			</trans-unit>
+			<trans-unit id="preset.en.title">
+				<source><![CDATA[JobRouter RSS Feeds (English)]]></source>
+			</trans-unit>
 			<trans-unit id="widgets.blog_de.description">
 				<source><![CDATA[Lists the recent German blog articles from the JobRouter website.]]></source>
 			</trans-unit>

@@ -9,11 +9,28 @@ Target group: **Editors, Integrators, Administrators**
 This extension provides dashboard widgets that display the latest content of
 RSS feeds from the `JobRouter <https://www.jobrouter.com/>`_ website.
 
-Select widgets
-==============
+.. contents:: Table of Contents
+   :depth: 1
+   :local:
 
-The JobRouter RSS widgets can be added to a dashboard with the
-:guilabel:`Add widget` wizard. You find it on the :guilabel:`JobRouter` tab:
+Add dashboard
+=============
+
+You can :ref:`create a dashboard <dashboard:adding-dashboard>` with a preset of
+the available RSS feeds for one language:
+
+.. figure:: _images/add-dashboard.png
+   :alt: Add dashboard
+
+   Add dashboard
+
+
+Add single widgets
+==================
+
+A JobRouter RSS widget can be :ref:`added to a dashboard
+<dashboard:adding-widgets>` with the :guilabel:`Add widget` wizard. You find it
+on the :guilabel:`JobRouter` tab:
 
 .. figure:: _images/add-widget.png
    :alt: Add JobRouter RSS widgets
