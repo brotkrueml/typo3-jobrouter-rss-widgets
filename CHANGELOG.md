@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2020-10-03
+
 ### Added
 - RSS widgets for blog (English/German)
 - Dashboard presets
@@ -28,6 +30,7 @@ Initial release
 - RSS widgets for videos (English/German)
 
 
-[Unreleased]: https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/releases/tag/v1.0.0
