@@ -6,13 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- RSS widgets for blog (English/German)
+
 ## [1.1.0] - 2020-08-21
 
 ### Added
-- RSS widget for press releases (English/German)
+- RSS widgets for press releases (English/German)
 
 ### Changed
-
 - Open video modal in full size
 - Display 5 items in each RSS widget instead of 3
 
@@ -21,8 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Initial release
 
 ### Added
-- RSS widget for Downloads (English/German)
-- RSS widget for Videos (English/German)
+- RSS widgets for downloads (English/German)
+- RSS widgets for videos (English/German)
 
 
 [Unreleased]: https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/compare/v1.1.0...HEAD

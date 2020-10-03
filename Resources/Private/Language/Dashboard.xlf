@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf" date="2020-05-09T13:56:34Z" product-name="jobrouter_rss_widgets">
+	<file source-language="en" datatype="plaintext" original="EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf" date="2020-09-29T16:13:12Z" product-name="jobrouter_rss_widgets">
 		<header/>
 		<body>
+			<trans-unit id="widgets.blog_de.description">
+				<source><![CDATA[Lists the recent German blog articles from the JobRouter website.]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.blog_de.more">
+				<source><![CDATA[More JobRouter blog articles]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.blog_de.title">
+				<source><![CDATA[JobRouter Blog (German)]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.blog_en.description">
+				<source><![CDATA[Lists the recent English blog articles from the JobRouter website.]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.blog_en.more">
+				<source><![CDATA[More JobRouter blog articles]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.blog_en.title">
+				<source><![CDATA[JobRouter Blog (English)]]></source>
+			</trans-unit>
 			<trans-unit id="widgets.downloads_de.description">
 				<source><![CDATA[Lists the recent German downloads from the JobRouter website.]]></source>
 			</trans-unit>
@@ -25,7 +43,7 @@
 				<source><![CDATA[Lists the recent German press releases from the JobRouter website.]]></source>
 			</trans-unit>
 			<trans-unit id="widgets.press_de.more">
-				<source><![CDATA[More press releases]]></source>
+				<source><![CDATA[More JobRouter press releases]]></source>
 			</trans-unit>
 			<trans-unit id="widgets.press_de.title">
 				<source><![CDATA[JobRouter Press Releases (German)]]></source>
@@ -34,7 +52,7 @@
 				<source><![CDATA[Lists the recent English press releases from the JobRouter website.]]></source>
 			</trans-unit>
 			<trans-unit id="widgets.press_en.more">
-				<source><![CDATA[More press releases]]></source>
+				<source><![CDATA[More JobRouter press releases]]></source>
 			</trans-unit>
 			<trans-unit id="widgets.press_en.title">
 				<source><![CDATA[JobRouter Press Releases (English)]]></source>

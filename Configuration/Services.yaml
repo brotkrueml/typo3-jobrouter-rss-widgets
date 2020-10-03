@@ -12,6 +12,20 @@ services:
     public: true
     factory: ['Brotkrueml\JobRouterRssWidgets\Dashboard\Views\Factory', 'widgetTemplate']
 
+  dashboard.buttons.brotkrueml.jobrouter_rss_widgets.blog_en:
+    class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
+    arguments:
+      $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.blog_en.more'
+      $link: 'https://www.jobrouter.com/en/blog/?utm_campaign=blog-rss-feed&utm_medium=typo3-rss-widgets'
+      $target: '_blank'
+
+  dashboard.buttons.brotkrueml.jobrouter_rss_widgets.blog_de:
+    class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
+    arguments:
+      $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.blog_de.more'
+      $link: 'https://www.jobrouter.com/de/blog/?utm_campaign=blog-rss-feed&utm_medium=typo3-rss-widgets'
+      $target: '_blank'
+
   dashboard.buttons.brotkrueml.jobrouter_rss_widgets.downloads_en:
     class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
     arguments:
@@ -53,6 +67,44 @@ services:
       $title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.videos_de.more'
       $link: 'https://www.jobrouter.com/de/videos/?utm_campaign=video-mrss-feed&utm_medium=typo3-rss-widgets'
       $target: '_blank'
+
+  dashboard.widget.brotkrueml.jobrouter_rss_widgets.blog_en:
+    class: 'Brotkrueml\JobRouterRssWidgets\Dashboard\Widgets\PictureRssWidget'
+    arguments:
+      $view: '@dashboard.views.brotkrueml.jobrouter_rss_widgets.widget'
+      $buttonProvider: '@dashboard.buttons.brotkrueml.jobrouter_rss_widgets.blog_en'
+      $cache: '@cache.dashboard.rss'
+      $options:
+        feedUrl: 'https://www.jobrouter.com/en/blog/blog.rss'
+        utmMedium: 'typo3-rss-widgets'
+    tags:
+      - name: dashboard.widget
+        identifier: 'jobrouter_rss_widgets_blog_en'
+        groupNames: 'jobrouter'
+        title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.blog_en.title'
+        description: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.blog_en.description'
+        iconIdentifier: 'content-widget-rss'
+        height: 'medium'
+        width: 'medium'
+
+  dashboard.widget.brotkrueml.jobrouter_rss_widgets.blog_de:
+    class: 'Brotkrueml\JobRouterRssWidgets\Dashboard\Widgets\PictureRssWidget'
+    arguments:
+      $view: '@dashboard.views.brotkrueml.jobrouter_rss_widgets.widget'
+      $buttonProvider: '@dashboard.buttons.brotkrueml.jobrouter_rss_widgets.blog_de'
+      $cache: '@cache.dashboard.rss'
+      $options:
+        feedUrl: 'https://www.jobrouter.com/de/blog/blog.rss'
+        utmMedium: 'typo3-rss-widgets'
+    tags:
+      - name: dashboard.widget
+        identifier: 'jobrouter_rss_widgets_blog_de'
+        groupNames: 'jobrouter'
+        title: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.blog_de.title'
+        description: 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:widgets.blog_de.description'
+        iconIdentifier: 'content-widget-rss'
+        height: 'medium'
+        width: 'medium'
 
   dashboard.widget.brotkrueml.jobrouter_rss_widgets.downloads_en:
     class: 'Brotkrueml\JobRouterRssWidgets\Dashboard\Widgets\PictureRssWidget'

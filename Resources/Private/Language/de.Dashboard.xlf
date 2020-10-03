@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:jobrouter_rss_widgets/Resources/Private/Language/de.Dashboard.xlf" date="2020-05-09T13:56:34Z" product-name="jobrouter_rss_widgets">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:jobrouter_rss_widgets/Resources/Private/Language/de.Dashboard.xlf" date="2020-09-29T16:13:12Z" product-name="jobrouter_rss_widgets">
 		<header/>
 		<body>
+			<trans-unit id="widgets.blog_de.description">
+				<source><![CDATA[Lists the recent German blog articles from the JobRouter website.]]></source>
+				<target><![CDATA[Zeigt die aktuellen deutschen Blog-Artikel von der JobRouter-Website an.]]></target>
+			</trans-unit>
+			<trans-unit id="widgets.blog_de.more">
+				<source><![CDATA[More JobRouter blog articles]]></source>
+				<target><![CDATA[Weitere JobRouter-Blog-Artikel]]></target>
+			</trans-unit>
+			<trans-unit id="widgets.blog_de.title">
+				<source><![CDATA[JobRouter Blog (German)]]></source>
+				<source><![CDATA[JobRouter Blog (Deutsch)]]></source>
+			</trans-unit>
+			<trans-unit id="widgets.blog_en.description">
+				<source><![CDATA[Lists the recent English blog articles from the JobRouter website.]]></source>
+				<target><![CDATA[Zeigt die aktuellen englischen Blog-Artikel von der JobRouter-Website an.]]></target>
+			</trans-unit>
+			<trans-unit id="widgets.blog_en.more">
+				<source><![CDATA[More JobRouter blog articles]]></source>
+				<target><![CDATA[Weitere JobRouter-Blog-Artikel]]></target>
+			</trans-unit>
+			<trans-unit id="widgets.blog_en.title">
+				<source><![CDATA[JobRouter Blog (English)]]></source>
+				<source><![CDATA[JobRouter Blog (Englisch)]]></source>
+			</trans-unit>
 			<trans-unit id="widgets.downloads_de.description">
 				<source><![CDATA[Lists the recent German downloads from the JobRouter website.]]></source>
 				<target><![CDATA[Zeigt die aktuellen deutschen Downloads von der JobRouter-Website an.]]></target>
@@ -33,7 +57,7 @@
 			</trans-unit>
 			<trans-unit id="widgets.press_de.more">
 				<source><![CDATA[More press releases]]></source>
-				<target><![CDATA[Weitere Pressemitteilungen]]></target>
+				<target><![CDATA[Weitere JobRouter-Pressemitteilungen]]></target>
 			</trans-unit>
 			<trans-unit id="widgets.press_de.title">
 				<source><![CDATA[JobRouter Press Releases (German)]]></source>
@@ -45,7 +69,7 @@
 			</trans-unit>
 			<trans-unit id="widgets.press_en.more">
 				<source><![CDATA[More press releases]]></source>
-				<target><![CDATA[Weitere Pressemitteilungen]]></target>
+				<target><![CDATA[Weitere JobRouter-Pressemitteilungen]]></target>
 			</trans-unit>
 			<trans-unit id="widgets.press_en.title">
 				<source><![CDATA[JobRouter Press Releases (English)]]></source>

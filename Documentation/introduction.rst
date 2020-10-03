@@ -16,7 +16,7 @@ What does it do?
 
 You can select dashboard widgets from various RSS feeds in different languages:
 
-.. figure:: _images/widgets-overview.png
+.. figure:: _images/widgets-overview.jpg
    :alt: Dashboard with all available JobRouter RSS widgets
 
    Dashboard with all available JobRouter RSS widgets
