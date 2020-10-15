@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of the "jobrouter_rss_widgets" extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ */
+
 return [
     'jobrouter_rss_widgets_de' => [
         'title' => 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:preset.de.title',
