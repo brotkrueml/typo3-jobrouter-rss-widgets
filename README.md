@@ -2,7 +2,7 @@
 
 [![Documentation Status](https://readthedocs.org/projects/typo3-jobrouter-rss-widgets/badge/?version=latest)](https://typo3-jobrouter.readthedocs.io/projects/rss-widgets/)
 
-This extension supports TYPO3 v10 LTS.
+This extension supports TYPO3 v10 LTS and TYPO3 v11.
 
 What this extension does:
   * Provide dashboard RSS widgets for blog (English, German)
