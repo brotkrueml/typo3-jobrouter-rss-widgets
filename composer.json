@@ -22,10 +22,10 @@
 		"typo3/cms-dashboard": "^10.4"
 	},
 	"require-dev": {
-		"friendsofphp/php-cs-fixer": "^2.16",
-		"phpunit/phpunit": "^8.5 || ^9.1",
+		"friendsofphp/php-cs-fixer": "^2.17",
+		"phpunit/phpunit": "^8.5 || ^9.5",
 		"typo3/coding-standards": "^0.2",
-		"vimeo/psalm": "^3.11"
+		"vimeo/psalm": "^4.3"
 	},
 	"autoload": {
 		"psr-4": {
