@@ -28,7 +28,7 @@
 			</trans-unit>
 			<trans-unit id="widgets.blog_de.title">
 				<source><![CDATA[JobRouter Blog (German)]]></source>
-				<source><![CDATA[JobRouter Blog (Deutsch)]]></source>
+				<target><![CDATA[JobRouter Blog (Deutsch)]]></target>
 			</trans-unit>
 			<trans-unit id="widgets.blog_en.description">
 				<source><![CDATA[Lists the recent English blog articles from the JobRouter website.]]></source>
@@ -40,7 +40,7 @@
 			</trans-unit>
 			<trans-unit id="widgets.blog_en.title">
 				<source><![CDATA[JobRouter Blog (English)]]></source>
-				<source><![CDATA[JobRouter Blog (Englisch)]]></source>
+				<target><![CDATA[JobRouter Blog (Englisch)]]></target>
 			</trans-unit>
 			<trans-unit id="widgets.downloads_de.description">
 				<source><![CDATA[Lists the recent German downloads from the JobRouter website.]]></source>
