@@ -9,3 +9,4 @@
 /README.md export-ignore
 /psalm.xml export-ignore
 /Tests export-ignore
+*.xsd export-ignore
