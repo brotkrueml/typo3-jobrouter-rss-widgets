@@ -35,4 +35,5 @@ Contents
    installation
    usage
    maintenance
+   changelog
    copyright
