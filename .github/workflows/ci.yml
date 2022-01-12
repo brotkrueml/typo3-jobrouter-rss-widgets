@@ -2,13 +2,15 @@ name: CI
 
 on:
   push:
-    paths-ignore:
-      - 'Documentation/**'
-      - '**.md'
+    paths:
+      - 'composer.json'
+      - '.github/workflows/ci.yml'
+      - '**.php'
   pull_request:
-    paths-ignore:
-      - 'Documentation/**'
-      - '**.md'
+    paths:
+      - 'composer.json'
+      - '.github/workflows/ci.yml'
+      - '**.php'
 
 jobs:
   build:
