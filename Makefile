@@ -1,5 +1,5 @@
 .PHONY: qa
-qa: cs unit-tests yaml-lint changelog
+qa: cs unit-tests phpstan yaml-lint changelog
 
 # See: https://github.com/crossnox/m2r2
 .PHONY: changelog
@@ -12,6 +12,10 @@ changelog:
 .PHONY: cs
 cs: vendor
 	.Build/bin/ecs check --fix
+
+.PHONY: phpstan
+phpstan: vendor
+	.Build/bin/phpstan analyse
 
 .PHONY: unit-tests
 unit-tests: vendor

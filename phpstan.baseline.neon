@@ -1,0 +1,107 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Configuration\\\\WidgetOptions\\:\\:__construct\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Configuration/WidgetOptions.php
+
+		-
+			message: "#^Class has a static method must so must contains \"Static\" in its name$#"
+			count: 1
+			path: Classes/Dashboard/Views/Factory.php
+
+		-
+			message: "#^\"empty\\(\\$imageUrl\\)\" is forbidden to use$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Array destruct is not allowed\\. Use value object to pass data instead$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Array with keys is not allowed\\. Use value object to pass data instead$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Class cognitive complexity is 13, keep it under 10$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\AbstractMediaRssWidget\\:\\:__construct\\(\\) has parameter \\$options with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\AbstractMediaRssWidget\\:\\:generateRssItems\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\AbstractMediaRssWidget\\:\\:getImage\\(\\) has parameter \\$haystack with no type specified\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\AbstractMediaRssWidget\\:\\:getImage\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\AbstractMediaRssWidget\\:\\:getImageInformation\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\AbstractMediaRssWidget\\:\\:getRssItems\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Parameter \\#1 \\$rssFeed of method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\AbstractMediaRssWidget\\:\\:generateRssItems\\(\\) expects SimpleXMLElement, SimpleXMLElement\\|false given\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Use value object over return of values$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/AbstractMediaRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\PictureRssWidget\\:\\:generateRssItems\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/PictureRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\PictureRssWidget\\:\\:getImageInformation\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/PictureRssWidget.php
+
+		-
+			message: "#^Use local named constant instead of inline string for regex to explain meaning by constant name$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/PictureRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\VideoRssWidget\\:\\:generateRssItems\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/VideoRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\VideoRssWidget\\:\\:getCssFiles\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/VideoRssWidget.php
+
+		-
+			message: "#^Method Brotkrueml\\\\JobRouterRssWidgets\\\\Dashboard\\\\Widgets\\\\VideoRssWidget\\:\\:getImageInformation\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/VideoRssWidget.php
+
+		-
+			message: "#^Offset 'url' does not exist on SimpleXMLElement\\|null\\.$#"
+			count: 1
+			path: Classes/Dashboard/Widgets/VideoRssWidget.php
+
