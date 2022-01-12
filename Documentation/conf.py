@@ -21,7 +21,7 @@ import sphinx_typo3_theme
 # -- Project information -----------------------------------------------------
 
 project = u'TYPO3 JobRouter RSS Widgets'
-copyright = u'2020, Chris Müller'
+copyright = u'2020-2022, Chris Müller'
 author = u'Chris Müller'
 
 # The short X.Y version
