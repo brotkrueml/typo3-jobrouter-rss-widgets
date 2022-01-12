@@ -57,9 +57,14 @@ class VideoRssWidget extends AbstractMediaRssWidget implements RequireJsModuleIn
     {
         $image = null;
         foreach ($thumbnails as $thumbnail) {
-            $image = (string)$thumbnail->attributes()['url'];
+            $image = (string)($thumbnail->attributes()['url'] ?? '');
+            $width = (int)($thumbnail->attributes()['width'] ?? 0);
+            $height = (int)($thumbnail->attributes()['height'] ?? 0);
+            if ($image === '' || $width === 0 || $height === 0) {
+                continue;
+            }
 
-            $ratio = (int)$thumbnail->attributes()['width'] / (int)$thumbnail->attributes()['height'];
+            $ratio = $width / $height;
             if ($ratio > 1.7) {
                 // 16:9
                 break;
