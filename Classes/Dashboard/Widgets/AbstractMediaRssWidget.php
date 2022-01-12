@@ -86,7 +86,7 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
 
         $this->webUploadsDir = '/' . static::UPLOADS_DIR;
         $this->absoluteUploadsDir = Environment::getPublicPath() . $this->webUploadsDir;
-        if (!\is_dir($this->absoluteUploadsDir)) {
+        if (! \is_dir($this->absoluteUploadsDir)) {
             GeneralUtility::mkdir_deep($this->absoluteUploadsDir);
         }
     }
@@ -108,7 +108,8 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
     protected function getRssItems(): array
     {
         $cacheHash = \md5(static::class . $this->options->getFeedUrl());
-        if ($items = $this->cache->get($cacheHash)) {
+        $items = $this->cache->get($cacheHash);
+        if ($items) {
             return $items;
         }
 
@@ -144,10 +145,10 @@ abstract class AbstractMediaRssWidget implements WidgetInterface
         $absoluteScaledImagePath = $this->absoluteUploadsDir . '/' . $scaledImageFileName;
         $webScaledImagePath = $this->webUploadsDir . '/' . $scaledImageFileName;
 
-        if (!\file_exists($absoluteScaledImagePath)) {
+        if (! \file_exists($absoluteScaledImagePath)) {
             $originalDownloadedImagePath = $this->absoluteUploadsDir . '/' . \basename($imageUrl);
 
-            if (false === \file_put_contents($originalDownloadedImagePath, GeneralUtility::getUrl($imageUrl))) {
+            if (\file_put_contents($originalDownloadedImagePath, GeneralUtility::getUrl($imageUrl)) === false) {
                 return [];
             }
 

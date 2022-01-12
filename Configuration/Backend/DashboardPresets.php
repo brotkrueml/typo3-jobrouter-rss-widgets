@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the "jobrouter_rss_widgets" extension for TYPO3 CMS.
  *
@@ -18,7 +20,7 @@ return [
             'jobrouter_rss_widgets_press_de',
             'jobrouter_rss_widgets_videos_de',
         ],
-        'showInWizard' => true
+        'showInWizard' => true,
     ],
     'jobrouter_rss_widgets_en' => [
         'title' => 'LLL:EXT:jobrouter_rss_widgets/Resources/Private/Language/Dashboard.xlf:preset.en.title',
@@ -30,6 +32,6 @@ return [
             'jobrouter_rss_widgets_press_en',
             'jobrouter_rss_widgets_videos_en',
         ],
-        'showInWizard' => true
+        'showInWizard' => true,
     ],
 ];

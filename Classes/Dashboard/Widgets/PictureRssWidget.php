@@ -48,7 +48,7 @@ class PictureRssWidget extends AbstractMediaRssWidget
 
     protected function getImageInformation($description): array
     {
-        if (!\preg_match('/<img src="(.*?)".*alt="(.*?)"/s', $description, $matches)) {
+        if (! \preg_match('/<img src="(.*?)".*alt="(.*?)"/s', $description, $matches)) {
             return [null, null];
         }
 

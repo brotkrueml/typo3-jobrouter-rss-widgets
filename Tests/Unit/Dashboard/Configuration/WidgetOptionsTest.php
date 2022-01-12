@@ -39,7 +39,9 @@ final class WidgetOptionsTest extends TestCase
      */
     public function defaultOptionsAreReturnedCorrectlyWhenNotSet(): void
     {
-        $options = new WidgetOptions(['feedUrl' => 'http://example.org/rss']);
+        $options = new WidgetOptions([
+            'feedUrl' => 'http://example.org/rss',
+        ]);
 
         self::assertSame(5, $options->getLimit());
         self::assertSame(43200, $options->getLifeTime());
@@ -67,13 +69,14 @@ final class WidgetOptionsTest extends TestCase
         $this->expectExceptionCode(1590918307);
         $this->expectExceptionMessage('The option "feedUrl" was not defined or is not a valid URL, "not valid url" given');
 
-        new WidgetOptions(['feedUrl' => 'not valid url']);
+        new WidgetOptions([
+            'feedUrl' => 'not valid url',
+        ]);
     }
 
     /**
      * @test
      * @dataProvider dataProviderForNumericOptionsThrowExceptionIfPositiveInteger
-     * @param array $options
      */
     public function numericOptionsThrowExceptionIfPositiveInteger(array $options): void
     {
@@ -89,42 +92,42 @@ final class WidgetOptionsTest extends TestCase
             [
                 'feedUrl' => 'http://example.org/rss',
                 'limit' => -1,
-            ]
+            ],
         ];
 
         yield 'limit is 0' => [
             [
                 'feedUrl' => 'http://example.org/rss',
                 'limit' => 0,
-            ]
+            ],
         ];
 
         yield 'lifeTime is negative' => [
             [
                 'feedUrl' => 'http://example.org/rss',
                 'lifeTime' => -1,
-            ]
+            ],
         ];
 
         yield 'lifeTime is 0' => [
             [
                 'feedUrl' => 'http://example.org/rss',
                 'lifeTime' => 0,
-            ]
+            ],
         ];
 
         yield 'imageWidth is negative' => [
             [
                 'feedUrl' => 'http://example.org/rss',
                 'lifeTime' => -1,
-            ]
+            ],
         ];
 
         yield 'imageWidth is 0' => [
             [
                 'feedUrl' => 'http://example.org/rss',
                 'lifeTime' => 0,
-            ]
+            ],
         ];
     }
 }
