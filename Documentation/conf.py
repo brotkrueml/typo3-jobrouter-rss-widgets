@@ -188,5 +188,5 @@ epub_exclude_files = ['search.html']
 # -- Options for intersphinx extension ---------------------------------------
 
 intersphinx_mapping = {
-    'dashboard': ('https://docs.typo3.org/c/typo3/cms-dashboard/master/en-us/', None)
+    'dashboard': ('https://docs.typo3.org/c/typo3/cms-dashboard/11.5/en-us/', None)
 }
