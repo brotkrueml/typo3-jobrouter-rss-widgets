@@ -21,5 +21,4 @@ You can select dashboard widgets from various RSS feeds in different languages:
 
    Dashboard with all available JobRouter RSS widgets
 
-For the differences between the versions have a look at the `change log
-<https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/blob/master/CHANGELOG.md>`_.
+For the differences between the versions have a look at the :ref:`changelog`.
