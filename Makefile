@@ -1,5 +1,5 @@
 .PHONY: qa
-qa: cs unit-tests changelog
+qa: cs unit-tests yaml-lint changelog
 
 # See: https://github.com/crossnox/m2r2
 .PHONY: changelog
@@ -24,6 +24,10 @@ vendor: composer.json composer.lock
 .PHONY: xlf-lint
 xlf-lint:
 	xmllint --schema Resources/Private/Language/xliff-core-1.2-strict.xsd --noout Resources/Private/Language/*.xlf
+
+.PHONY: yaml-lint
+yaml-lint: vendor
+	find -regex '.*\.ya?ml' ! -path "./.Build/*" -exec .Build/bin/yaml-lint -v {} \;
 
 .PHONY: zip
 zip:
