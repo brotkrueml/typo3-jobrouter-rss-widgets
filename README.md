@@ -11,4 +11,6 @@ What this extension does:
   * Provide dashboard RSS widgets for press releases (English, German)
   * Provide dashboard RSS widgets for videos (English, German)
 
-[Documentation](https://typo3-jobrouter.readthedocs.io/projects/rss-widgets/)
+[Documentation](https://typo3-jobrouter.readthedocs.io/projects/rss-widgets/) |
+[Changelog](https://github.com/brotkrueml/typo3-jobrouter-rss-widgets/blob/main/CHANGELOG.md) |
+[Extension in TER](https://extensions.typo3.org/extension/jobrouter_rss_widgets)
