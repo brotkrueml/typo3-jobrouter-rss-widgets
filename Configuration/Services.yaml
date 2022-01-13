@@ -6,6 +6,7 @@ services:
 
   Brotkrueml\JobRouterRssWidgets\:
     resource: '../Classes/*'
+    exclude: '../Classes/Extension.php'
 
   dashboard.views.brotkrueml.jobrouter_rss_widgets.widget:
     class: 'TYPO3\CMS\Fluid\View\StandaloneView'
