@@ -4,6 +4,9 @@
 Introduction
 ============
 
+.. attention::
+   This TYPO3 extension is no longer maintained.
+
 `JobRouter <https://www.jobrouter.com/>`_ is a scalable digitisation platform
 which links processes, data and documents. The TYPO3 extension `TYPO3 JobRouter
 RSS Widgets <https://github.com/brotkrueml/typo3-jobrouter-rss-widgets>`_

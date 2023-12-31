@@ -6,8 +6,10 @@ Installation
 
 Target group: **Administrators**
 
-.. note::
+.. attention::
+   This TYPO3 extension is no longer maintained.
 
+.. note::
    The extension supports TYPO3 v10 LTS and TYPO3 v11 LTS.
 
 
